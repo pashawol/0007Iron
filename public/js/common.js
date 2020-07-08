@@ -111,51 +111,16 @@ var JSCCommon = {
 };
 
 function eventHandler() {
-	var _objectSpread2;
+	var _objectSpread2, _objectSpread3;
 
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>'); // /добавляет подложку для pixel perfect
-	// const url = document.location.href;
-	// $.each($(".top-nav__nav a "), function() {
-	// 	if (this.href == url) {
-	// 		if ($(this).hasClass("top-nav__link") == true) {
-	// 			$(this).addClass('top-nav__link-active');
-	// 		}
-	// 		if ($(this).hasClass("footer__link") == true) {
-	// 			$(this).addClass('footer__link-active');
-	// 		} 
-	// 	}; 
-	// }); 
-	// /закрыть/открыть мобильное меню
-
-	function heightses() {
-		// скрывает моб меню
-		var topH = document.querySelector('header').scrollHeight;
-		var stickyElement = document.querySelector('.top-nav');
-
-		window.onscroll = function () {
-			if ($(window).scrollTop() > topH) {
-				stickyElement.classList.add('fixed');
-			} else {
-				stickyElement.classList.remove('fixed');
-			}
-		}; // конец добавил
-
-
-		if (window.matchMedia("(min-width: 992px)").matches) {
-			JSCCommon.closeMenu();
-		}
-	}
-
-	window.addEventListener('resize', function () {
-		heightses();
-	});
-	heightses(); // листалка по стр
+	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>')
+	// /добавляет подложку для pixel perfect
+	// листалка по стр
 
 	$(" .top-nav li a, .scroll-link").click(function () {
 		var elementClick = $(this).attr("href");
@@ -165,90 +130,58 @@ function eventHandler() {
 		}, 1100);
 		return false;
 	});
-	var defaultSl = {};
-	var swiper4 = new Swiper('.color-slider', _objectSpread(_objectSpread({}, defaultSl), {}, (_objectSpread2 = {
+	var defaultSl = {
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 5
+		},
+		slidesPerView: 1
+	};
+	var swiper1 = new Swiper('.headerBlock__slider-lg--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+		loop: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev'
+		}
+	}));
+	var swiper2 = new Swiper('.headerBlock__slider-sm--js', _objectSpread(_objectSpread({}, defaultSl), {}, (_objectSpread2 = {
 		slidesPerView: 'auto',
 		watchOverflow: true,
-		spaceBetween: 0,
 		freeMode: true
-	}, _defineProperty(_objectSpread2, "watchOverflow", true), _defineProperty(_objectSpread2, "slidesPerGroup", 3), _defineProperty(_objectSpread2, "loop", true), _defineProperty(_objectSpread2, "loopFillGroupWithBlank", true), _defineProperty(_objectSpread2, "touchRatio", 0.2), _defineProperty(_objectSpread2, "slideToClickedSlide", true), _defineProperty(_objectSpread2, "freeModeMomentum", true), _defineProperty(_objectSpread2, "navigation", {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev'
-	}), _objectSpread2))); // modal window
-
-	var gets = function () {
-		var a = window.location.search;
-		var b = new Object();
-		var c;
-		a = a.substring(1).split("&");
-
-		for (var i = 0; i < a.length; i++) {
-			c = a[i].split("=");
-			b[c[0]] = c[1];
+	}, _defineProperty(_objectSpread2, "watchOverflow", true), _defineProperty(_objectSpread2, "slideToClickedSlide", true), _defineProperty(_objectSpread2, "freeModeMomentum", true), _defineProperty(_objectSpread2, "spaceBetween", 28), _objectSpread2)));
+	var swiper44 = new Swiper('.s-news__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, (_objectSpread3 = {
+		slidesPerView: 'auto',
+		watchOverflow: true,
+		freeMode: true
+	}, _defineProperty(_objectSpread3, "watchOverflow", true), _defineProperty(_objectSpread3, "slideToClickedSlide", true), _defineProperty(_objectSpread3, "freeModeMomentum", true), _defineProperty(_objectSpread3, "spaceBetween", 30), _defineProperty(_objectSpread3, "breakpoints", {
+		1200: {
+			spaceBetween: 64
+		},
+		// when window width is >= 640px
+		1600: {
+			spaceBetween: 108
 		}
-
-		return b;
-	}(); // form
-
-
-	var gets = function () {
-		var a = window.location.search;
-		var b = new Object();
-		var c;
-		a = a.substring(1).split("&");
-
-		for (var i = 0; i < a.length; i++) {
-			c = a[i].split("=");
-			b[c[0]] = c[1];
+	}), _objectSpread3)));
+	var swiper4 = new Swiper('.s-calendar__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+		slidesPerView: 1,
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true
 		}
+	})); // modal window
 
-		return b;
-	}(); // form
-
-
-	$("form").submit(function (e) {
-		e.preventDefault();
-		var th = $(this);
-		var data = th.serialize();
-		th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
-		th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
-		th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
-		th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
-		$.ajax({
-			url: 'action.php',
-			type: 'POST',
-			data: data
-		}).done(function (data) {
-			$.fancybox.close();
-			$.fancybox.open({
-				src: '#modal-thanks',
-				type: 'inline'
-			}); // window.location.replace("/thanks.html");
-
-			setTimeout(function () {
-				// Done Functions
-				th.trigger("reset"); // $.magnificPopup.close();
-				// ym(53383120, 'reachGoal', 'zakaz');
-				// yaCounter55828534.reachGoal('zakaz');
-			}, 4000);
-		}).fail(function () {});
-	});
 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
 	if (isIE11) {
 		$("body").prepend("<p   class=\"browsehappy container\">\u041A \u0441\u043E\u0436\u0430\u043B\u0435\u043D\u0438\u044E, \u0432\u044B \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0435\u0442\u0435 \u0443\u0441\u0442\u0430\u0440\u0435\u0432\u0448\u0438\u0439 \u0431\u0440\u0430\u0443\u0437\u0435\u0440. \u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430, <a href=\"http://browsehappy.com/\" target=\"_blank\">\u043E\u0431\u043D\u043E\u0432\u0438\u0442\u0435 \u0432\u0430\u0448 \u0431\u0440\u0430\u0443\u0437\u0435\u0440</a>, \u0447\u0442\u043E\u0431\u044B \u0443\u043B\u0443\u0447\u0448\u0438\u0442\u044C \u043F\u0440\u043E\u0438\u0437\u0432\u043E\u0434\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u044C, \u043A\u0430\u0447\u0435\u0441\u0442\u0432\u043E \u043E\u0442\u043E\u0431\u0440\u0430\u0436\u0430\u0435\u043C\u043E\u0433\u043E \u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u0430 \u0438 \u043F\u043E\u0432\u044B\u0441\u0438\u0442\u044C \u0431\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u043E\u0441\u0442\u044C.</p>");
-	} // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+	}
 
-
-	var vh = window.innerHeight * 0.01; // Then we set the value in the --vh custom property to the root of the document
-
-	document.documentElement.style.setProperty('--vh', "".concat(vh, "px")); // We listen to the resize event
-
-	window.addEventListener('resize', function () {
-		// We execute the same script as before
-		var vh = window.innerHeight * 0.01;
-		document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
+	var wow = new WOW({
+		mobile: false,
+		animateClass: 'animate__animated'
 	});
+	wow.init();
 }
 
 ;

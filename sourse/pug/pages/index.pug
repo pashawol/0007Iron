@@ -3,20 +3,20 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug 
+include ../blocks/s-calendar/_s-calendar.pug 
+include ../blocks/s-news/_s-news.pug 
 
 block variables
-	- let  mainPage= null
+	- let  mainPage= 'main-page'
 block title
 	- let  title= 'title'
 	title= title
 block pagecontent 
-	//- +mob-mnu()
-	+header()
-
-		+top-nav()
-		+topLine()  
+	+mob-mnu()
+	+top-nav()
 	+headerBlock()
-	+sForm()
-	+sContact()
+	+s-calendar
+	+sContent
+	+s-news
 	+footer()
 	

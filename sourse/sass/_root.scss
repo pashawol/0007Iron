@@ -1,15 +1,19 @@
 :root {
-
-	@include media-breakpoint-up(md) {
-
-		--sPT: #{rem(80)};
-		--sPB: #{rem(90)};
-		--sTPB: #{rem(40)};
+	// --animate-delay: 0.8s;
+	@include media-breakpoint-up(xxl) { 
+		--fontSizeBase: #{$em-base};
 	}
+	
+	@include media-breakpoint-up(xl) { 
+		--fontSizeBase: 18px;
+	} 
+		--fontSizeBase: 16px; 
 
-	--sPT: #{rem(80 / 2)};
-	--sPB: #{rem(90 / 2)};
-	--sTPB: #{rem(40 / 2)};
+	 
+	--TNPT: #{rem(54)};
+		--sPT: #{rem(65)};
+		--sPB: var(--sPT);
+	--sTPB: #{rem(60)};
 }
 
 @include media-breakpoint-up(xl) {}

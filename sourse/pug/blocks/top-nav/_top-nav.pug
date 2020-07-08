@@ -8,20 +8,37 @@ mixin mob-mnu()
 		//- request.responseType = 'json';
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
-	+b.toggle-menu-mobile--js.d-lg-none
-		span
 	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
-		
+			.top-nav__user(href="/")
+				+icon('user')
 			+mnu()
 			.text-right
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
-	+b.top-nav.block-with-lazy
+	+b.top-nav.block-with-lazy(class="wow  animate__fadeIn  ")
 		.container
-			+mnu()
+			.row
+				.col.order-lg-0.order-last
+					+e.logo(href="/")
+						img(src="img/@2x/logo.png", alt="")
+				+e.col.col-auto
+					img(src="img/@2x/logo-1.png", alt="")
+				+e.col.col-auto
+					img(src="img/@2x/logo-2.png", alt="")
+				+e.col.col-sm-auto.col
+					img(src="img/@2x/logo-3.png", alt="")
+				.w-100
+				.col.d-none.d-lg-block
+					+mnu()
+				.col-auto.order-last.d-none.d-md-block
+					+e.user(href="/")
+						+icon('user')
+				.col-auto.d-lg-none.order-last
+					+b.toggle-menu-mobile--js.d-lg-none
+						span
 					
 	// end top-nav

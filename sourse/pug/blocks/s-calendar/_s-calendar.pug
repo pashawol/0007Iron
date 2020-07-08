@@ -1,0 +1,93 @@
+mixin s-calendar()
+	// start s-calendar
+	+b.SECTION.s-calendar.section#s-calendar&attributes(attributes)
+		.container
+			+b.section-title(class="wow  animate__fadeIn  ")
+				h2 Календарь мероприятий
+				
+			.row
+				.col-lg-6( class="wow  animate__fadeIn  ") 
+					+e.bg
+						+e.wrap
+							+e.calendar-header
+								+e.control-btn--prev
+									+icon('chevron-left')
+								+e.month-name Август 2020
+								+e.control-btn--next
+									+icon('chevron-right') 
+							+calendarTable()
+				.col-lg-6( class="wow  animate__fadeIn  ")
+					+e.slider--js.swiper-container
+						.swiper-wrapper
+							- for (var x = 0; x < 2; x++)
+								+e.slide.swiper-slide
+									+e.label Мастер-класс
+									img.res-i(src="img/@2x/date.png", alt="")
+									+e.title Награждение лучших участников
+									p 6 августа 2020 г. в актовом зале СТИ НИТУ «МИСиС» состоялась торжественная церемония награждения участников и победителей IV открытого Фестиваля «Железно»...
+									+e.btn(href="#") Узнать больше
+						.swiper-pagination
+
+	// end s-calendar
+mixin calendarTable()
+	+e.TABLE.calendar-body
+		thead
+			tr
+				td.header-cell Пн
+				td.header-cell Вт
+				td.header-cell Ср
+				td.header-cell Чт
+				td.header-cell Пт
+				td.header-cell Сб
+				td.header-cell Вс
+		tbody
+			tr
+				td.day-of-other-month 27
+				td.day-of-other-month 28
+				td.day-of-other-month 29
+				td.day-of-other-month 30
+				td.default-day 1
+				td.default-day 2
+				td.default-day 3
+			tr
+				td.default-day 4
+				td.default-day 5
+				td.default-day 6
+				td.default-day.today-cell 7
+				td.default-day.pink-doted 8
+					+e.counter 2
+				td.default-day 9
+				td.default-day 10
+			tr
+				td.default-day 11
+				td.default-day 12
+				td.default-day 13
+				td.default-day 14
+				td.default-day 15
+				td.default-day 16
+				td.default-day 17
+			tr
+				td.default-day 18
+				td.default-day 19
+				td.default-day 20
+				td.default-day 21
+				td.default-day.pink-doted 22
+					+e.counter 2
+				td.default-day 23
+				td.default-day 24
+			tr
+				td.default-day 25
+				td.default-day 26
+				td.default-day 27
+				td.default-day 28
+				td.default-day 29
+				td.default-day 30
+				td.default-day 31
+			tr
+				td.day-of-other-month 1
+				td.day-of-other-month 2
+				td.day-of-other-month 3
+				td.day-of-other-month 4
+				td.day-of-other-month 5
+				td.day-of-other-month 6
+				td.day-of-other-month 7

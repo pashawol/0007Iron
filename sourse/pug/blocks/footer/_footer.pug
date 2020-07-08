@@ -1,4 +1,20 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			h2 footer
+			+e.head.row.align-items-center
+				.col-lg( class="wow  animate__fadeIn  ")
+					+e.small © Образовательно-выставочный центр "Железно!" 2020
+				.col-xxl-3.text-xxl-right.order-lg-last( class="wow  animate__fadeIn  ")
+					+e.small
+						a(href="#") Политика конфиденциальности
+				.col-auto( class="wow  animate__fadeIn  ")
+					+e.small: img(src="img/@2x/logo-1.png", alt="")
+				.col-auto( class="wow  animate__fadeIn  ")
+					+e.small: img(src="img/@2x/logo-2.png", alt="")
+				.col-auto( class="wow  animate__fadeIn  ")
+					+e.small: img(src="img/@2x/logo-3.png", alt="")
+			.row 
+				.col( class="wow  animate__fadeIn  ")
+					+mnu()
+				.col-auto.align-self-end( class="wow  animate__fadeIn  ")
+					+soc()

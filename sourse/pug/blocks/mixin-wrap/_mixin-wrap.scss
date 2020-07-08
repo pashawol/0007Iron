@@ -1,17 +1,18 @@
  
 	  
 .soc{
-	margin: 0 rem(-5px);
+	margin: 0 rem(-13);
 	display: flex;
 	&__item{
 		text-decoration: none !important;
-		margin: 0 rem(5px);
+		margin: 0 rem(13);
 		vertical-align: middle;
 		@include mt;
 		display: block;
+		color: $body-color;
 		&:hover{
-		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
-			opacity: .6 ;
+			color: $primary;
+		 
 		}
 		
 	}

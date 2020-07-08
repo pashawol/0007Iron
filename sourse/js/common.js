@@ -121,54 +121,11 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>')
+	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
-
-	// const url = document.location.href;
-	// $.each($(".top-nav__nav a "), function() {
-
-	// 	if (this.href == url) {
-	// 		if ($(this).hasClass("top-nav__link") == true) {
-
-	// 			$(this).addClass('top-nav__link-active');
-	// 		}
-	// 		if ($(this).hasClass("footer__link") == true) {
-
-	// 			$(this).addClass('footer__link-active');
-	// 		} 
-	// 	}; 
-	// }); 
-
-	// /закрыть/открыть мобильное меню
-
-	function heightses() {
  
-		// скрывает моб меню
-
-		const topH = document.querySelector('header').scrollHeight;
-		let stickyElement = document.querySelector('.top-nav')
-		window.onscroll = () => {
-			if ($(window).scrollTop() > topH) {
-
-				stickyElement.classList.add('fixed');
-			} else {
-				stickyElement.classList.remove('fixed'); 
-			}
-		};
-		// конец добавил
-		if (window.matchMedia("(min-width: 992px)").matches) {
-			JSCCommon.closeMenu();
-		}
-	}
-
-	window.addEventListener('resize', () => {
-		heightses();
-
-	});
-
-	heightses();
 
 	// листалка по стр
 	$(" .top-nav li a, .scroll-link").click(function () {
@@ -181,106 +138,85 @@ function eventHandler() {
 	});
 
 	let defaultSl = {
-
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 5
+		},
+		slidesPerView: 1,
 	}
-	const swiper4 = new Swiper('.color-slider', {
+	const swiper1 = new Swiper('.headerBlock__slider-lg--js', {
+		// slidesPerView: 5,
+		...defaultSl, 
+		loop: true, 
+								navigation: {
+									nextEl: '.swiper-button-next',
+									prevEl: '.swiper-button-prev',
+								},
+	
+	});
+	const swiper2 = new Swiper('.headerBlock__slider-sm--js', {
 		// slidesPerView: 5,
 		...defaultSl,
 		slidesPerView: 'auto',
 		watchOverflow: true,
-		spaceBetween: 0,
 		freeMode: true,
 		watchOverflow: true,
-		slidesPerGroup: 3,
-
-		// centeredSlides: true,
-		loop: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
+		// loop: true, 
+		// touchRatio: 0.2,
 		slideToClickedSlide: true,
 		freeModeMomentum: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+		spaceBetween: 28, 
+	});
+
+	const swiper44 = new Swiper('.s-news__slider--js', {
+		// slidesPerView: 5,
+		...defaultSl,
+		slidesPerView: 'auto',
+		watchOverflow: true,
+		freeMode: true,
+		watchOverflow: true,
+		// loop: true, 
+		// touchRatio: 0.2,
+		slideToClickedSlide: true,
+		freeModeMomentum: true,
+		spaceBetween: 30,
+		breakpoints: {
+			1200: {
+				spaceBetween: 64
+			},
+			// when window width is >= 640px
+			1600: {
+				spaceBetween: 108
+			}
+		}
+	 
+	});
+
+	
+	const swiper4 = new Swiper('.s-calendar__slider--js', {
+		// slidesPerView: 5,
+		...defaultSl,
+		slidesPerView: 1,
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true,
 		},
-
 	});
+
 	// modal window
-
-	var gets = (function () {
-		var a = window.location.search;
-		var b = new Object();
-		var c;
-		a = a.substring(1).split("&");
-		for (var i = 0; i < a.length; i++) {
-			c = a[i].split("=");
-			b[c[0]] = c[1];
-		}
-		return b;
-	})();
-	// form
-
-
-	var gets = (function () {
-		var a = window.location.search;
-		var b = new Object();
-		var c;
-		a = a.substring(1).split("&");
-		for (var i = 0; i < a.length; i++) {
-			c = a[i].split("=");
-			b[c[0]] = c[1];
-		}
-		return b;
-	})();
-	// form
-	$("form").submit(function (e) {
-		e.preventDefault();
-		const th = $(this);
-		var data = th.serialize();
-		th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
-		th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
-		th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
-		th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
-		$.ajax({
-			url: 'action.php',
-			type: 'POST',
-			data: data,
-		}).done(function (data) {
-
-			$.fancybox.close();
-			$.fancybox.open({
-				src: '#modal-thanks',
-				type: 'inline'
-			});
-			// window.location.replace("/thanks.html");
-			setTimeout(function () {
-				// Done Functions
-				th.trigger("reset");
-				// $.magnificPopup.close();
-				// ym(53383120, 'reachGoal', 'zakaz');
-				// yaCounter55828534.reachGoal('zakaz');
-			}, 4000);
-		}).fail(function () { });
-
-	});
+ 
 
 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 	if (isIE11) {
 		$("body").prepend(`<p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p>`)
 
 	}
-
-	// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-	let vh = window.innerHeight * 0.01;
-	// Then we set the value in the --vh custom property to the root of the document
-	document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-	// We listen to the resize event
-	window.addEventListener('resize', () => {
-		// We execute the same script as before
-		let vh = window.innerHeight * 0.01;
-		document.documentElement.style.setProperty('--vh', `${vh}px`);
+	var wow = new WOW({
+		mobile: false,
+		animateClass: 'animate__animated', 
 	});
+	wow.init();
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

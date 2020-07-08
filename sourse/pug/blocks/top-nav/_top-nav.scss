@@ -1,33 +1,80 @@
+.main-page{
+	.top-nav{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+			@include media-breakpoint-up(sm) {
+
+				--TNPT: #{rem(90)};
+			}
+	}
+}
 .top-nav {
-	padding-top: 15px;
-	// position: absolute;
-	top: 100%;
-	// @include clearfix;ss
-	z-index: 20;
-	padding-top: 3px;
-	@include mt;
-	padding-bottom: 10px;
-	top: 0;
-	left: 0;
-	width: 100%;
-
-	&.fixed {
-		width: 100vw;
-		bottom: auto;
-		margin-top: 0;
-		background-color: #fff;
+	position: relative;
+	z-index: 200;
+	img{
+		margin-bottom: 1rem;
+		@extend .res-i;
 	}
+	&__col{
+		@include media-breakpoint-down(sm) {
+			&:nth-child(1),
+			&:nth-child(2){
+				img{
+					max-width:55px;
+				}
+			}
+		img{
 
-	&__nav {
-		text-align: center;
-		list-style-type: none;
+				max-height: rem(31);
+			}
+		}
 	}
-
-	&__item {
-		display: inline-block;
-		list-style-type: none;
+	.w-100{
+		background-color: #000000;
+		height: 1px;
+		opacity: 0.2;
+	 
+		margin-left: 15px;
+		margin-right: 15px;
+		max-width: calc(100% - 30px);
+		margin-bottom: rem(25);
 	}
+	padding-top: var(--TNPT);
+	ul{
+		list-style: none;
+		display: flex;
+		@include roww($small);
+		margin-bottom: 0;
+		a{
+			display: block;
+			@extend .btn;
+			@extend .btn-outline-primary;
+			padding: rem(10) rem(20);
+			text-align: center;
+			font-size: $small;
+			// @extend .mono;
+			font-weight: bold;
+			border-radius: 200px;
+		}
+	}
+	&__user{
+		@extend .btn;
+		@extend .btn-primary;
+		padding: 0;
+		width: rem(48);
+		height: rem(48);
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.icon{
 
+			font-size: rem(18);
+		}
+
+	}
 	// 
 	@include media-breakpoint-up(xl) {}
 

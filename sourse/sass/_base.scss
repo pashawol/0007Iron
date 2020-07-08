@@ -19,13 +19,13 @@ html {
 
 body,
 html {
-	font-size: $em-base;
+	font-size: var(--fontSizeBase);
 	// @include font-size(1rem);
 }
 
 
 .section {
-	@include bgs; 
+	// @include bgs; 
 	padding-top: var(--sPT);
 	padding-bottom: var(--sPB);
 }
@@ -33,6 +33,10 @@ html {
 .section-title { 
 	padding-bottom: var(--sTPB);
 }
+		h2{
+			@extend .mono;
+			// font-weight: bold;
+		}
 
 body {
 	min-width: 320px;
@@ -272,27 +276,30 @@ input::-webkit-inner-spin-button {
 }
 
 .swiper-button-hand {
-	width: 45px;
-	height: 16px;
+	width: rem(45px);
+	height: rem(24px);
 	@include bgs;
 	z-index: 300;
 	outline: none !important;
 	// margin-bottom: 0;
 	background-image: none;
 	margin: 0;
-	@include a-cent(y);
-
-	&-next {
-		// background-image: url(../img/arr-right.png);
-		right: 0;
+	@include a-cent(y); 
+	&::after{
+		display: none;
 	}
-
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	// --pos: -15px; 
+	--pos: 0;
+	&-next { 
+		right: var(--pos);
+		background-image: url(../img/arrow-right.svg);
+	} 
 	&-prev {
-		left: 0;
-		// background-image: url(../img/arr-left.png);
-
-	}
-
+		left: var(--pos); 
+		background-image: url(../img/arrow-left.svg);
+	} 
 }
 
 .swiper-pagination {
@@ -301,15 +308,15 @@ input::-webkit-inner-spin-button {
 
 	&-bullet {
 		opacity: 1;
-		width: 8px;
-		height: 8px;
+		width: rem(16);
+		height: rem(16);
 		border-radius: 50%;
-		background-color: $secondary;
+		background-color: #C4C4C4;
 		outline: none !important;
-		@include mt;
-		margin-left: rem(8);
-		// padding-right: rem(8);
-		margin-right: rem(5);
+		@include mt; 
+		display: inline-block;
+		margin-left: 0;
+		margin-right: rem(20);
 
 		&-active,
 		&:hover {
@@ -391,9 +398,16 @@ iframe {
 	border: none;
 }
 
-.elem{
-	width: 200px;
-	height: 200px;
-	background-color: $primary;
-	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+.btn-accent{
+	@extend .btn;
+	@extend .btn-primary;
+	border-radius: 0;
+	font-weight: bold;
+	width: rem(248);
+	padding: rem(24) rem(10);
+	background-image: url(../img/btn-bg.svg);
+	background-repeat: no-repeat;
+	background-size: 100% 70%;
+	background-position: center 120%;
+
 }
