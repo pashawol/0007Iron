@@ -2,7 +2,7 @@ mixin s-news()
 	// start s-news
 	+b.SECTION.s-news.section#s-news&attributes(attributes)
 		.container
-			+b.section-title( class="wow  animate__fadeIn  ")
+			+b.section-title( class="wow  animate__fadeInLeft")
 				.row
 					.col-auto
 						h2 Новости
@@ -11,7 +11,7 @@ mixin s-news()
 			+e.slider--js.swiper-container
 				.swiper-wrapper
 					mixin slide(i)
-						+e.slide.swiper-slide( class="wow  animate__fadeIn  ")
+						+e.slide.swiper-slide( class="wow  animate__fadeInUp  ")
 							+e.item(href="#")
 								+e.DIV.img-wrap
 									img.swiper-lazy.res-i(src=`img/@2x/news-${i}.jpg`, alt="")

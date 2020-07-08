@@ -2,11 +2,11 @@ mixin s-calendar()
 	// start s-calendar
 	+b.SECTION.s-calendar.section#s-calendar&attributes(attributes)
 		.container
-			+b.section-title(class="wow  animate__fadeIn  ")
+			+b.section-title(class="wow  animate__fadeInLeft  ")
 				h2 Календарь мероприятий
 				
 			.row
-				.col-lg-6( class="wow  animate__fadeIn  ") 
+				.col-lg-6( class="wow  animate__fadeInLeft  ") 
 					+e.bg
 						+e.wrap
 							+e.calendar-header
@@ -16,7 +16,7 @@ mixin s-calendar()
 								+e.control-btn--next
 									+icon('chevron-right') 
 							+calendarTable()
-				.col-lg-6( class="wow  animate__fadeIn  ")
+				.col-lg-6( class="wow  animate__fadeInRight  ")
 					+e.slider--js.swiper-container
 						.swiper-wrapper
 							- for (var x = 0; x < 2; x++)

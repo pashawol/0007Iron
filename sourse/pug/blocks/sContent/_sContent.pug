@@ -2,11 +2,12 @@ mixin sContent()
 	// start sContent
 	+b.SECTION.sContent.section#sContent&attributes(attributes)
 		.container
-			+e.wrapper( class="wow  animate__fadeIn  ")
-				h2 Центр &laquo;Железно!&raquo;&nbsp;&mdash; это многофункциональное экспозиционно-образовательное и&nbsp;досуговое пространство.
-				//- img.res-i(src="img/", alt="")
-				+pic('about-img.png')
-				p В&nbsp;оснащенных мультимедийным оборудованием залах&nbsp;Вы получите возможность просматривать фотослайды, видеоролики с&nbsp;использованием интерактивных сервисов, а&nbsp;так&nbsp;же ознакомиться с&nbsp;процессами выплавки стали, производства проката,...
-				a.btn-accent(href="#") Узнать больше
+			+e.wrapper
+				+pic('about-img.png')( class="wow  animate__fadeInLeft")
+				div( class="wow  animate__fadeInRight  ")
+					h2 Центр &laquo;Железно!&raquo;&nbsp;&mdash; это многофункциональное экспозиционно-образовательное и&nbsp;досуговое пространство.
+					//- img.res-i(src="img/", alt="")
+					p В&nbsp;оснащенных мультимедийным оборудованием залах&nbsp;Вы получите возможность просматривать фотослайды, видеоролики с&nbsp;использованием интерактивных сервисов, а&nbsp;так&nbsp;же ознакомиться с&nbsp;процессами выплавки стали, производства проката,...
+					a.btn-accent(href="#") Узнать больше
 
 	// end sContent

@@ -19,25 +19,25 @@ mixin mob-mnu()
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
-	+b.top-nav.block-with-lazy(class="wow  animate__fadeIn  ")
+	+b.top-nav.block-with-lazy
 		.container
 			.row
-				.col.order-lg-0.order-last
-					+e.logo(href="/")
+				.col.order-lg-0.order-last(class="wow  animate__fadeInLeft  ")
+					+e.logo(href="/" )
 						img(src="img/@2x/logo.png", alt="")
-				+e.col.col-auto
+				+e.col.col-auto(class="wow  animate__fadeInRight  ")
 					img(src="img/@2x/logo-1.png", alt="")
-				+e.col.col-auto
+				+e.col.col-auto(class="wow  animate__fadeInRight  ")
 					img(src="img/@2x/logo-2.png", alt="")
-				+e.col.col-sm-auto.col
+				+e.col.col-sm-auto.col(class="wow  animate__fadeInRight  ")
 					img(src="img/@2x/logo-3.png", alt="")
 				.w-100
-				.col.d-none.d-lg-block
+				.col.d-none.d-lg-block(class="wow  animate__fadeInLeft  ")
 					+mnu()
-				.col-auto.order-last.d-none.d-md-block
+				.col-auto.order-last.d-none.d-md-block(class="wow  animate__fadeInRight  ")
 					+e.user(href="/")
 						+icon('user')
-				.col-auto.d-lg-none.order-last
+				.col-auto.d-lg-none.order-last(class="wow  animate__fadeInRight  ")
 					+b.toggle-menu-mobile--js.d-lg-none
 						span
 					
