@@ -40,6 +40,10 @@
 		top: rem(200);
 		// top: 10px;
 	}
+	&__slide{
+		position: relative;
+		overflow: hidden;
+	}
 	&__slider-sm{
 		overflow: inherit;
 	}
