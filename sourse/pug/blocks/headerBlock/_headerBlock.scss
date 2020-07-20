@@ -6,7 +6,7 @@
 	// min-height: 1088px;
 	@include media-breakpoint-up(lg) {
 
-		margin-top: rem(48);
+		margin-top: rem(8);
 	}
 	margin-top: rem(28);
 	// bgi
@@ -145,6 +145,7 @@
 	&__col{
 		position: relative;
 		padding-bottom: rem(40);
+	
 	}
 	&__img-main{
 		position: relative;
