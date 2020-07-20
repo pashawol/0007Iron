@@ -31,10 +31,13 @@
 
 		}
 		@include media-breakpoint-down(sm) {
+			img{
+
+			}
 			&:nth-child(1),
 			&:nth-child(2){
 				img{
-					max-width:55px;
+					max-width:70px;
 				}
 			}
 		img{
