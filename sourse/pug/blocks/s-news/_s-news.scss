@@ -61,6 +61,46 @@
 		&__item:hover &__title{
 			border-color: $body-color;
 		}
+
+
+		&--03{
+			background-image: none;
+		}
+
+		&__col{
+			margin-bottom: 94px;
+		}
+
+		.btn-accent{
+			margin-top: 49px;
+			margin-bottom: 43px;
+		}
+
+		&__title-lg{
+			@extend .mono;
+			font-weight: 900;
+			margin-bottom: rem(20);
+			@extend .h1;
+			text-shadow: em(2) em(2) 0 #fff;
+			position: relative;
+			// z-index: 2;
+			&::before{
+				z-index: -1;
+				content: attr(data-title);
+				position: absolute;
+				top: rem(12);
+				left: rem(-4);
+				color: #E3E3E3;
+				text-shadow: rem(2) rem(2) 0 $primary,
+				rem(2) rem(-2) 0 $primary,
+				rem(-2) rem(2) 0 $primary,
+				rem(-2) rem(-2) 0 $primary,
+				rem(2) 0px 0 $primary,
+				0px rem(2) 0 $primary,
+				rem(-2) 0px 0 $primary,
+				0px rem(-2) 0 $primary;
+			}
+		}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

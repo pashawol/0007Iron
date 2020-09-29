@@ -42,3 +42,36 @@ mixin top-nav()
 						span
 					
 	// end top-nav
+
+mixin top-nav-02() 
+	// start top-nav-02
+	+b.top-nav.block-with-lazy
+		.container
+			.row
+				+e.col.col(class="wow  animate__fadeInLeft  ")
+					+e.logo(href="/" )
+						img(src="img/@2x/logo.png", alt="")
+				+e.col.col-auto(class="wow  animate__fadeInLeft  ")
+					img(src="img/@2x/logo-1.png", alt="")
+				+e.col.col-auto(class="wow  animate__fadeInLeft ")
+					img(src="img/@2x/logo-2.png", alt="")
+				+e.col.col-auto(class="wow  animate__fadeInLeft ")
+					img(src="img/@2x/logo-3.png", alt="")
+				.w-100
+
+				.col.d-none.d-lg-block(class="wow  animate__fadeInLeft  ")
+					+mnu()
+				.col-auto.d-lg-none.order-last(class="wow  animate__fadeInRight  ")
+				+e.col.col-auto.d-none.d-md-block(class="wow  animate__fadeInRight  ")
+					+e.user(href="/")
+						+icon('user')
+					+b.toggle-menu-mobile--js.d-lg-none
+						span
+
+
+
+
+			//- .col-lg-auto.col.order-lg-0.order-last(class="wow  animate__fadeInLeft  ")
+			//- 		+e.logo(href="/" )
+					
+	// end top-nav-02

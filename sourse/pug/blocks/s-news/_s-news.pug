@@ -22,3 +22,37 @@ mixin s-news()
 					+slide('2')
 					+slide('3')
 	// end s-news
+
+
+mixin s-news-03()
+	// start s-news-03
+	+b.SECTION.s-news--03.section#s-news&attributes(attributes)
+		.container
+			+b.section-title
+				+e.title-lg Новости
+			.row
+					mixin slide(i)
+						+e.col.col-lg-4
+							+e.slide.swiper-slide( class="wow  animate__fadeInUp  ")
+								+e.item(href="#")
+									+e.DIV.img-wrap
+										img.swiper-lazy.res-i(src=`img/@2x/news-${i}.jpg`, alt="")
+									+e.DIV.caption
+										+e.DIV.date 01 ИЮНЯ 2018
+										+e.DIV.title Победители корпоративного творческого конкурса Металлоинвеста «Труд БЕЗ опасности» посетили "Железно!"
+					+slide('1')
+					+slide('2')
+					+slide('3')
+					+slide('1')
+					+slide('2')
+					+slide('3')
+					+slide('1')
+					+slide('2')
+					+slide('3')
+					+slide('1')
+					+slide('2')
+					+slide('3')
+
+			.text-center
+				a.btn-accent(href="#") Загрузить еще
+	// end s-news-03
