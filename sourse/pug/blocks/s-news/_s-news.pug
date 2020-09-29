@@ -27,9 +27,7 @@ mixin s-news()
 mixin s-news-03()
 	// start s-news-03
 	+b.SECTION.s-news--03.section#s-news&attributes(attributes)
-		.container
-			+b.section-title
-				+e.title-lg Новости
+		.container 
 			.row
 					mixin slide(i)
 						+e.col.col-lg-4
@@ -53,6 +51,6 @@ mixin s-news-03()
 					+slide('2')
 					+slide('3')
 
-			.text-center
+			.text-center( class="wow  animate__fadeInUp  ")
 				a.btn-accent(href="#") Загрузить еще
 	// end s-news-03
