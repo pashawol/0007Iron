@@ -5,9 +5,9 @@
 			
 			max-width: rem(784);
 			@include media-breakpoint-up(sm){
-			background: url(../img/@2x/calendar-bg.png);
-		}
-		background: url(../img/@1x/calendar-bg.png);
+				background: url(../img/@2x/calendar-bg.png);
+			}
+			background: url(../img/@1x/calendar-bg.png);
 			// background: #F4F4F4;
 			@include media-breakpoint-up(lg){
 				margin-bottom: 0;
@@ -15,17 +15,17 @@
 				margin-right: 0;
 				padding: rem(15) rem(66 / 2) ;
 				padding-right: rem(44 /2);
-					}
-					// padding: rem(15) rem(30) ;
-					// padding-right: rem(44 /2);
-					margin-left: -15px;
-					margin-right: -15px;
-					margin-bottom: 2rem;
-					@include media-breakpoint-up(xl) {
+			}
+			// padding: rem(15) rem(30) ;
+			// padding-right: rem(44 /2);
+			margin-left: -15px;
+			margin-right: -15px;
+			margin-bottom: 2rem;
+			@include media-breakpoint-up(xl) {
 
-						padding: rem(15) rem(96 - 30) ;
-						padding-right: rem(74 - 30);
-					}
+				padding: rem(15) rem(96 - 30) ;
+				padding-right: rem(74 - 30);
+			}
 			background-size: 100% 100%;
 			background-repeat: no-repeat;
 		}
@@ -41,7 +41,7 @@
 			text-align: center;
 
 		}
-	&__calendar {
+		&__calendar {
 			width: 100%;
 
 			@include media-breakpoint-up(lg) {
@@ -54,7 +54,7 @@
 			@include media-breakpoint-up(xl) {
 				margin-bottom: 0;
 			}
-			}
+		}
 
 			//header
 			&__calendar-header {
@@ -248,6 +248,12 @@
 					position: static;
 					text-align: left;
 				}
+
+		&__date{
+			color: $primary;
+			margin-bottom: 10px;
+			font-size: $small;
+		}		
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

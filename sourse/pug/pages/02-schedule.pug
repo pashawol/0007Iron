@@ -1,0 +1,22 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/s-calendar/_s-calendar.pug 
+include ../blocks/s-news/_s-news.pug 
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Новости'
+	title= title
+block pagecontent 
+	+mob-mnu()
+	+top-nav-02()
+	//- +headerBlock()
+	+s-calendar-02()
+	//- +sContent
+
+	+footer()
+	
