@@ -253,7 +253,98 @@
 			color: $primary;
 			margin-bottom: 10px;
 			font-size: $small;
-		}		
+		}
+
+		.mb{
+			margin-bottom: 52px;
+		}
+
+		&__col{
+			@include media-breakpoint-up(lg){
+				margin-bottom: 34px;
+			}
+			margin-bottom: 4px;
+			
+		}
+
+		&__h4{
+			@extend .h4;
+			color: $primary;
+			font-family: $mono;
+			line-height: (36 / 30);
+			font-weight: 900;
+			width: 1328px;
+			@include media-breakpoint-up(lg){
+				margin-bottom: 42px;
+			}
+			margin-bottom: 25px;
+			margin-top: 30px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		&__event{
+			background-image: url(../img/@2x/schedule-bg.jpg);
+			background-repeat: no-repeat;
+			@include media-breakpoint-up(lg){
+				padding: 76px 59px 31px 76px;
+				
+			}
+			@include media-breakpoint-up(sm){
+				padding: 41px 34px 5px 43px;
+
+			}
+			padding: 17px 5px 0 16px;
+			max-width: 1328px;
+			// height: 344px;
+			@include media-breakpoint-up(xl){
+				margin-right: auto;
+				margin-left: auto;
+			}
+			background-size: cover;
+			margin-bottom: 26px;
+		}
+
+		&__img-wrap{
+			display: block;
+			width: 352px;
+			@include media-breakpoint-up(xxl){
+				margin-right: 67px;
+			}
+		}
+
+		&__text-block{
+			max-width: 560px;
+		}
+
+		&__btn--circle{
+			width: 77px;
+			height: 77px;
+			border-radius: 50%;
+			margin-left: auto;
+			padding: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.icon-arrow-next{
+				font-size: 16px;
+				fill: none;
+				stroke: currentColor;
+				stroke-width: 3px;
+			}
+		}
+
+		// &__btn--02{
+		// 	@include media-breakpoint-up(lg){
+		// 		margin-bottom: 2rem;
+		// 	}
+		// 	margin-bottom: 4rem;
+		// }
+
+		&__coll{
+			display: flex;
+			align-items: flex-end;
+		}
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

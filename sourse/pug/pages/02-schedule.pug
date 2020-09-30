@@ -9,11 +9,13 @@ include ../blocks/s-news/_s-news.pug
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'Новости'
+	- let  title= 'Расписание'
 	title= title
 block pagecontent 
 	+mob-mnu()
 	+top-nav-02()
+	.page-head.container( class="wow  animate__fadeInUp  ")
+		h1(data-title= title)= title
 	//- +headerBlock()
 	+s-calendar-02()
 	//- +sContent
