@@ -261,7 +261,7 @@
 
 		&__col{
 			@include media-breakpoint-up(lg){
-				margin-bottom: 34px;
+				margin-bottom: 24px;
 			}
 			margin-bottom: 4px;
 			
@@ -276,6 +276,7 @@
 			width: 1328px;
 			@include media-breakpoint-up(lg){
 				margin-bottom: 42px;
+				margin-top: 40px;
 			}
 			margin-bottom: 25px;
 			margin-top: 30px;
