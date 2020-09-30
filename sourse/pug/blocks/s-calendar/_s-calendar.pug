@@ -57,18 +57,18 @@ mixin s-calendar-02()
 
 				mixin event(h,i)
 					if h
-						+e.h4!= h
+						+e.h4( class="wow  animate__fadeInLeft  ")!= h
 					+e.event
 						.row
-							.col-lg-auto
+							.col-lg-auto( class="wow  animate__fadeInLeft  ")
 								+e.img-wrap(href="#")
-									+pic(`schedule-${i}.jpg`)
+									+pic(`schedule-${i}.jpg`,'','lazy','')
 							.col
 								+e.text-block
 									+e.date 6 августа 2020
 									+e.title Награждение лучших участников
 									p 6 августа 2020 г. в актовом зале СТИ НИТУ «МИСиС» состоялась торжественная церемония награждения участников и победителей IV открытого Фестиваля «Железно»...
-							+e.coll.col-xl-auto
+							+e.coll.col-xl-auto( class="wow  animate__fadeInLeft  ")
 								+e.btn--circle(href="#")
 									+icon('arrow-next')
 

@@ -251,19 +251,19 @@
 
 		&__date{
 			color: $primary;
-			margin-bottom: 10px;
+			margin-bottom: rem(10);
 			font-size: $small;
 		}
 
 		.mb{
-			margin-bottom: 52px;
+			margin-bottom: rem(52);
 		}
 
 		&__col{
 			@include media-breakpoint-up(lg){
-				margin-bottom: 24px;
+				margin-bottom: rem(24);
 			}
-			margin-bottom: 4px;
+			margin-bottom: rem(4);
 			
 		}
 
@@ -273,13 +273,13 @@
 			font-family: $mono;
 			line-height: (36 / 30);
 			font-weight: 900;
-			width: 1328px;
+			width: rem(1328);
 			@include media-breakpoint-up(lg){
-				margin-bottom: 42px;
-				margin-top: 40px;
+				margin-bottom: rem(42);
+				margin-top: rem(40);
 			}
-			margin-bottom: 25px;
-			margin-top: 30px;
+			margin-bottom: rem(25);
+			margin-top: rem(30);
 			margin-right: auto;
 			margin-left: auto;
 		}
@@ -288,39 +288,41 @@
 			background-image: url(../img/@2x/schedule-bg.jpg);
 			background-repeat: no-repeat;
 			@include media-breakpoint-up(lg){
-				padding: 76px 59px 31px 76px;
+				padding: rem(76) rem(59) rem(31) rem(76);
 				
 			}
 			@include media-breakpoint-up(sm){
-				padding: 41px 34px 5px 43px;
+				padding: rem(41) rem(34) rem(5) rem(43);
 
 			}
-			padding: 17px 5px 0 16px;
-			max-width: 1328px;
+			padding: rem(17) rem(16) 0;
+			max-width: rem(1328);
 			// height: 344px;
 			@include media-breakpoint-up(xl){
 				margin-right: auto;
 				margin-left: auto;
 			}
 			background-size: cover;
-			margin-bottom: 26px;
+			margin-bottom: rem(26);
 		}
 
 		&__img-wrap{
 			display: block;
-			width: 352px;
+			max-width: rem(352);
+			// max-width: 352px;
 			@include media-breakpoint-up(xxl){
-				margin-right: 67px;
+				margin-right: rem(67);
 			}
 		}
 
 		&__text-block{
-			max-width: 560px;
+			max-width: rem(560);
 		}
 
 		&__btn--circle{
-			width: 77px;
-			height: 77px;
+			width: rem(77);
+			height: rem(77);
+			background-size: auto;
 			border-radius: 50%;
 			margin-left: auto;
 			padding: 0;
@@ -328,19 +330,12 @@
 			align-items: center;
 			justify-content: center;
 			.icon-arrow-next{
-				font-size: 16px;
+				font-size: rem(16);
 				fill: none;
 				stroke: currentColor;
-				stroke-width: 3px;
+				stroke-width: rem(3);
 			}
 		}
-
-		// &__btn--02{
-		// 	@include media-breakpoint-up(lg){
-		// 		margin-bottom: 2rem;
-		// 	}
-		// 	margin-bottom: 4rem;
-		// }
 
 		&__coll{
 			display: flex;
