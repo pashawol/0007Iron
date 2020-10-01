@@ -5,9 +5,9 @@
 			
 			max-width: rem(784);
 			@include media-breakpoint-up(sm){
-			background: url(../img/@2x/calendar-bg.png);
-		}
-		background: url(../img/@1x/calendar-bg.png);
+				background: url(../img/@2x/calendar-bg.png);
+			}
+			background: url(../img/@1x/calendar-bg.png);
 			// background: #F4F4F4;
 			@include media-breakpoint-up(lg){
 				margin-bottom: 0;
@@ -15,17 +15,17 @@
 				margin-right: 0;
 				padding: rem(15) rem(66 / 2) ;
 				padding-right: rem(44 /2);
-					}
-					// padding: rem(15) rem(30) ;
-					// padding-right: rem(44 /2);
-					margin-left: -15px;
-					margin-right: -15px;
-					margin-bottom: 2rem;
-					@include media-breakpoint-up(xl) {
+			}
+			// padding: rem(15) rem(30) ;
+			// padding-right: rem(44 /2);
+			margin-left: -15px;
+			margin-right: -15px;
+			margin-bottom: 2rem;
+			@include media-breakpoint-up(xl) {
 
-						padding: rem(15) rem(96 - 30) ;
-						padding-right: rem(74 - 30);
-					}
+				padding: rem(15) rem(96 - 30) ;
+				padding-right: rem(74 - 30);
+			}
 			background-size: 100% 100%;
 			background-repeat: no-repeat;
 		}
@@ -41,7 +41,7 @@
 			text-align: center;
 
 		}
-	&__calendar {
+		&__calendar {
 			width: 100%;
 
 			@include media-breakpoint-up(lg) {
@@ -54,7 +54,7 @@
 			@include media-breakpoint-up(xl) {
 				margin-bottom: 0;
 			}
-			}
+		}
 
 			//header
 			&__calendar-header {
@@ -248,6 +248,99 @@
 					position: static;
 					text-align: left;
 				}
+
+		&__date{
+			color: $primary;
+			margin-bottom: rem(10);
+			font-size: $small;
+		}
+
+		.mb{
+			margin-bottom: rem(52);
+		}
+
+		&__col{
+			@include media-breakpoint-up(lg){
+				margin-bottom: rem(24);
+			}
+			margin-bottom: rem(4);
+			
+		}
+
+		&__h4{
+			@extend .h4;
+			color: $primary;
+			font-family: $mono;
+			line-height: (36 / 30);
+			font-weight: 900;
+			width: rem(1328);
+			@include media-breakpoint-up(lg){
+				margin-bottom: rem(42);
+				margin-top: rem(40);
+			}
+			margin-bottom: rem(25);
+			margin-top: rem(30);
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		&__event{
+			background-image: url(../img/@2x/schedule-bg.jpg);
+			background-repeat: no-repeat;
+			@include media-breakpoint-up(lg){
+				padding: rem(76) rem(59) rem(31) rem(76);
+				
+			}
+			@include media-breakpoint-up(sm){
+				padding: rem(41) rem(34) rem(5) rem(43);
+
+			}
+			padding: rem(17) rem(16) 0;
+			max-width: rem(1328);
+			// height: 344px;
+			@include media-breakpoint-up(xl){
+				margin-right: auto;
+				margin-left: auto;
+			}
+			background-size: cover;
+			margin-bottom: rem(26);
+		}
+
+		&__img-wrap{
+			display: block;
+			max-width: rem(352);
+			// max-width: 352px;
+			@include media-breakpoint-up(xxl){
+				margin-right: rem(67);
+			}
+		}
+
+		&__text-block{
+			max-width: rem(560);
+		}
+
+		&__btn--circle{
+			width: rem(77);
+			height: rem(77);
+			background-size: auto;
+			border-radius: 50%;
+			margin-left: auto;
+			padding: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.icon-arrow-next{
+				font-size: rem(16);
+				fill: none;
+				stroke: currentColor;
+				stroke-width: rem(3);
+			}
+		}
+
+		&__coll{
+			display: flex;
+			align-items: flex-end;
+		}
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

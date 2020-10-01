@@ -29,6 +29,60 @@ mixin s-calendar()
 						.swiper-pagination
 
 	// end s-calendar
+
+
+mixin s-calendar-02()
+	// start s-calendar-02
+	+b.SECTION.s-calendar.section#s-calendar&attributes(attributes)
+		.container
+			.row
+				+e.col.col-lg-6( class="wow  animate__fadeInLeft  ") 
+					+e.bg
+						+e.wrap
+							+e.calendar-header
+								+e.control-btn--prev
+									+icon('chevron-left')
+								+e.month-name Август 2020
+								+e.control-btn--next
+									+icon('chevron-right') 
+							+calendarTable()
+				.col-lg-6( class="wow  animate__fadeInRight  ")
+					+e.slider.swiper-container
+						+e.label Ближайшее мероприятия
+						img.res-i.mb(src="img/@2x/date.png", alt="")
+						+e.date 6 августа 2020
+						+e.title Награждение лучших участников
+						p 6 августа 2020 г. в актовом зале СТИ НИТУ «МИСиС» состоялась торжественная церемония награждения участников и победителей IV открытого Фестиваля «Железно»...
+						+e.btn--02(href="#") Узнать больше
+
+				mixin event(h,i)
+					if h
+						+e.h4( class="wow  animate__fadeInLeft  ")!= h
+					+e.event
+						.row
+							.col-lg-auto( class="wow  animate__fadeInLeft  ")
+								+e.img-wrap(href="#")
+									+pic(`schedule-${i}.jpg`,'','lazy','')
+							.col
+								+e.text-block
+									+e.date 6 августа 2020
+									+e.title Награждение лучших участников
+									p 6 августа 2020 г. в актовом зале СТИ НИТУ «МИСиС» состоялась торжественная церемония награждения участников и победителей IV открытого Фестиваля «Железно»...
+							+e.coll.col-xl-auto( class="wow  animate__fadeInLeft  ")
+								+e.btn--circle(href="#")
+									+icon('arrow-next')
+
+			+event(`Август 2020`,`1`)
+			+event(``,`2`)
+			+event(`Сентябрь 2020`,`3`)
+			+event(`Октябрь 2020`,`4`)
+			+event(``,`5`)
+			+event(``,`6`)
+
+
+
+	// end s-calendar-02
+
 mixin calendarTable()
 	+e.TABLE.calendar-body
 		thead
