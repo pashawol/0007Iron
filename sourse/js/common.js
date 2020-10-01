@@ -121,7 +121,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/02.jpg);"></div>')
+	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/about.jpg);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -189,9 +189,30 @@ function eventHandler() {
 				spaceBetween: 108
 			}
 		}
-	 
 	});
 
+	let aboutSlider = new Swiper('.sliderAbout-js', {
+		...defaultSl,
+		slidesPerView: 1,
+		loop: true,
+		spaceBetween: 15,
+		watchOverflow: true,
+		// slideToClickedSlide: true,
+		freeModeMomentum: true,
+		breakpoints: {
+			576: {
+				slidesPerView: 2
+			},
+			992: {
+				spaceBetween: 30,
+				slidesPerView: 3
+			},
+		},
+		navigation: {
+			nextEl: '.sAboutInside__slider .about-next',
+			prevEl: '.sAboutInside__slider .about-prev',
+		},
+	});
 	
 	const swiper4 = new Swiper('.s-calendar__slider--js', {
 		// slidesPerView: 5,

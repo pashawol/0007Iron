@@ -54,3 +54,21 @@ mixin s-news-03()
 			.text-center( class="wow  animate__fadeInUp  ")
 				a.btn-accent(href="#") Загрузить еще
 	// end s-news-03
+
+mixin s-news-about()
+	// start s-news
+	+b.SECTION.s-news--about.section#s-news&attributes(attributes)
+		.container
+			+e.slider--js.swiper-container
+				.swiper-wrapper
+					mixin slide(i,t)
+						+e.slide.swiper-slide( class="wow  animate__fadeInUp  ")
+							+e.item(href="#")
+								+e.DIV.img-wrap
+									img.swiper-lazy.res-i(src=`img/@2x/about-last-${i}.jpg`, alt="")
+								+e.DIV.caption
+									+e.DIV.name= t
+									+e.DIV.title Центр «Железно!» – это многофункциональное экспозиционно-образовательное и досуговое пространство. В оснащенных мультимедийным оборудованием залах посетители получат 
+					+slide('1','Гараж')
+					+slide('2','Кино')
+					+slide('3','Звуки железа')
