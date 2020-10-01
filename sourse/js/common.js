@@ -189,9 +189,30 @@ function eventHandler() {
 				spaceBetween: 108
 			}
 		}
-	 
 	});
 
+	let aboutSlider = new Swiper('.sliderAbout-js', {
+		...defaultSl,
+		slidesPerView: 1,
+		loop: true,
+		spaceBetween: 15,
+		watchOverflow: true,
+		// slideToClickedSlide: true,
+		freeModeMomentum: true,
+		breakpoints: {
+			576: {
+				slidesPerView: 2
+			},
+			992: {
+				spaceBetween: 30,
+				slidesPerView: 3
+			},
+		},
+		navigation: {
+			nextEl: '.sliderAbout-js .about-next',
+			prevEl: '.sliderAbout-js .about-prev',
+		},
+	});
 	
 	const swiper4 = new Swiper('.s-calendar__slider--js', {
 		// slidesPerView: 5,

@@ -130,4 +130,7 @@
 	@include media-breakpoint-down(sm) {}
 	@include media-breakpoint-down(xs) {} 
 
+	&--about {
+		background-image: none;
+	}
 } // end.s-news

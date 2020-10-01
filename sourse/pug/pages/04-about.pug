@@ -1,0 +1,28 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/s-calendar/_s-calendar.pug 
+include ../blocks/s-news/_s-news.pug 
+include ../blocks/sAbout/_sAbout.pug 
+include ../blocks/sAboutInside/_sAboutInside.pug 
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'О нас'
+	title= title
+block pagecontent 
+	+mob-mnu()
+	+top-nav()
+	.page-head.container( class="wow  animate__fadeInUp  ")
+		h1(data-title= title)= title
+	//- +headerBlock()
+	//- +s-calendar
+	//- +sContent
+	+sAbout()
+	+sAboutInside()
+	+s-news-about()
+	+footer()
+	

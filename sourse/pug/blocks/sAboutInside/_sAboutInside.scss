@@ -1,0 +1,76 @@
+// start .sAboutInside
+.sAboutInside {
+	
+	&__links {
+		margin-bottom: rem(83);
+	}
+
+	&__link {
+		&:not(:last-child) {
+			margin-right: rem(51);
+		}
+
+		&.active {
+			text-decoration-line: underline;
+			font-size: $h4-font-size;
+			margin-right: rem(60);
+			pointer-events: none;
+		}
+	}
+
+	&__title {
+		@extend .h2;
+	}
+
+	&__item {
+		position: relative;
+		margin-bottom: rem(64);
+		color: #fff;
+		padding: rem(83) rem(154) rem(96) rem(113);
+	}
+
+	.about-prev, .about-next {
+		position: relative;
+		z-index: 990;
+		.icon {
+			stroke: currentColor;
+			fill: transparent;
+			stroke-width: 2px;
+			font-size: rem(40);
+		}
+	}
+
+	// .about-prev {
+	// 	margin-right: rem(39);
+	// }
+
+	// .about-next {
+	// 	margin-left: rem(39);
+	// }
+
+	.swiper-container {
+		// display: flex;
+		align-items: center;
+
+		picture {
+			@include block(408,296);
+			img {
+				@include a-cent;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+
+
+
+
+
+
+	@include media-breakpoint-up(xs) {}
+	@include media-breakpoint-between(md, xl) { }
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.sAboutInside
