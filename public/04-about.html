@@ -90,15 +90,15 @@
 			<div class="sAbout section" id="sAbout">
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-6">
+						<div class="sAbout__col col-lg wow animate__fadeInLeft"> 
 							<!-- picture-->
 							<picture class="lazy"> 
 								<source srcset="#" data-srcset="img/@2x/webp/about.webp" type="image/webp"/><img src="#" data-src="img/@2x/about.jpg" alt=""/>
 							</picture>
 							<!-- /picture-->
 						</div>
-						<div class="col">
-							<p>Центр &laquo;Железно!&raquo;&nbsp;&mdash; это многофункциональное экспозиционно-образовательное и&nbsp;досуговое пространство. В&nbsp;оснащенных мультимедийным оборудованием залах посетители получат возможность просматривать фотослайды, видеоролики, с&nbsp;использованием интерактивных сервисов ознакомиться с&nbsp;процессами выплавки стали, производства проката, с&nbsp;историей разведки железорудных месторождений и&nbsp;создания выдающихся сооружений из&nbsp;металла, найти нужную информацию в&nbsp;режиме online. Экспозиционные помещения музея трансформируются в&nbsp;образовательные классы, где планируется проводить лекции, вебинары, мастер-классы</p>
+						<div class="sAbout__textCol col wow animate__fadeInRight">
+							<p>Центр &laquo;Железно!&raquo;&nbsp;&mdash; это многофункциональное экспозиционно&#8209;образовательное и&nbsp;досуговое пространство. В оснащенных мультимедийным оборудованием залах посетители получат возможность просматривать фотослайды, видеоролики, с&nbsp;использованием интерактивных сервисов ознакомиться с&nbsp;процессами выплавки стали, производства проката, с&nbsp;историей разведки железорудных месторождений и&nbsp;создания выдающихся сооружений из металла, найти нужную информацию в&nbsp;режиме online. Экспозиционные помещения музея трансформируются в образовательные классы, где планируется проводить лекции, вебинары, мастер-классы</p>
 						</div>
 					</div>
 				</div>
@@ -107,7 +107,7 @@
 			<!-- start sAboutInside-->
 			<div class="sAboutInside section" id="sAboutInside">
 				<div class="container">
-					<div class="sAboutInside__links"><a class="sAboutInside__link active" href="#">Красота</a><a class="sAboutInside__link" href="#">Сила</a><a class="sAboutInside__link" href="#">Ржавчина</a><a class="sAboutInside__link" href="#">Польза</a><a class="sAboutInside__link" href="#">Гараж</a><a class="sAboutInside__link" href="#">Кино</a><a class="sAboutInside__link" href="#">Звуки железа</a>
+					<div class="sAboutInside__links wow animate__fadeInLeft"><a class="sAboutInside__link active" href="#">Красота</a><a class="sAboutInside__link" href="#">Сила</a><a class="sAboutInside__link" href="#">Ржавчина</a><a class="sAboutInside__link" href="#">Польза</a><a class="sAboutInside__link" href="#">Гараж</a><a class="sAboutInside__link" href="#">Кино</a><a class="sAboutInside__link" href="#">Звуки железа</a>
 					</div>
 						<div class="sAboutInside__item">
 							<!-- picture-->
@@ -115,16 +115,18 @@
 								<source srcset="#" data-srcset="img/@2x/webp/about-bg-1.webp" type="image/webp"/><img src="#" data-src="img/@2x/about-bg-1.png" alt=""/>
 							</picture>
 							<!-- /picture-->
-							<div class="sAboutInside__title">Красота
+							<div class="sAboutInside__text">
+								<div class="sAboutInside__title wow animate__fadeInUp">Красота
+								</div>
+								<p class="wow  animate__fadeInLeft  ">Центр &laquo;Железно!&raquo;&nbsp;&mdash; это многофункциональное экспозиционно-образовательное и&nbsp;досуговое пространство. В&nbsp;оснащенных мультимедийным оборудованием залах посетители получат возможность просматривать фотослайды, видеоролики, с использованием интерактивных сервисов ознакомиться с&nbsp;процессами выплавки стали, производства проката, с историей разведки железорудных месторождений и&nbsp;создания выдающихся сооружений</p>
 							</div>
-							<p>Центр &laquo;Железно!&raquo;&nbsp;&mdash; это многофункциональное экспозиционно-образовательное и&nbsp;досуговое пространство. В&nbsp;оснащенных мультимедийным оборудованием залах посетители получат возможность просматривать фотослайды, видеоролики, с&nbsp;использованием интерактивных сервисов ознакомиться с&nbsp;процессами выплавки стали, производства проката, с&nbsp;историей разведки железорудных месторождений и&nbsp;создания выдающихся сооружений</p>
-							<div class="sAboutInside__slider">
+							<div class="sAboutInside__slider wow animate__fadeInRight">
+								<div class="about-prev">
+									<svg class="icon icon-chevron-left-sl ">
+										<use xlink:href="img/svg/sprite.svg#chevron-left-sl"></use>
+									</svg>
+								</div>
 								<div class="swiper-container sliderAbout-js">
-									<div class="about-prev">
-										<svg class="icon icon-chevron-left-sl ">
-											<use xlink:href="img/svg/sprite.svg#chevron-left-sl"></use>
-										</svg>
-									</div>
 									<div class="swiper-wrapper">
 										<div class="swiper-slide"><a class="sAboutInside__aboutSlide" href="img/@2x/about-1-1.jpg" data-fancybox="about">
 											<picture>
@@ -142,11 +144,11 @@
 											</picture></a>
 										</div>
 									</div>
-									<div class="about-next">
-										<svg class="icon icon-chevron-right-sl ">
-											<use xlink:href="img/svg/sprite.svg#chevron-right-sl"></use>
-										</svg>
-									</div>
+								</div>
+								<div class="about-next">
+									<svg class="icon icon-chevron-right-sl ">
+										<use xlink:href="img/svg/sprite.svg#chevron-right-sl"></use>
+									</svg>
 								</div>
 							</div>
 						</div>
@@ -156,16 +158,18 @@
 								<source srcset="#" data-srcset="img/@2x/webp/about-bg-2.webp" type="image/webp"/><img src="#" data-src="img/@2x/about-bg-2.png" alt=""/>
 							</picture>
 							<!-- /picture-->
-							<div class="sAboutInside__title">Сила
+							<div class="sAboutInside__text">
+								<div class="sAboutInside__title wow animate__fadeInUp">Сила
+								</div>
+								<p class="wow  animate__fadeInLeft  ">Центр &laquo;Железно!&raquo;&nbsp;&mdash; это многофункциональное экспозиционно-образовательное и&nbsp;досуговое пространство. В&nbsp;оснащенных мультимедийным оборудованием залах посетители получат возможность просматривать фотослайды, видеоролики, с использованием интерактивных сервисов ознакомиться с&nbsp;процессами выплавки стали, производства проката, с историей разведки железорудных месторождений и&nbsp;создания выдающихся сооружений</p>
 							</div>
-							<p>Центр &laquo;Железно!&raquo;&nbsp;&mdash; это многофункциональное экспозиционно-образовательное и&nbsp;досуговое пространство. В&nbsp;оснащенных мультимедийным оборудованием залах посетители получат возможность просматривать фотослайды, видеоролики, с&nbsp;использованием интерактивных сервисов ознакомиться с&nbsp;процессами выплавки стали, производства проката, с&nbsp;историей разведки железорудных месторождений и&nbsp;создания выдающихся сооружений</p>
-							<div class="sAboutInside__slider">
+							<div class="sAboutInside__slider wow animate__fadeInRight">
+								<div class="about-prev">
+									<svg class="icon icon-chevron-left-sl ">
+										<use xlink:href="img/svg/sprite.svg#chevron-left-sl"></use>
+									</svg>
+								</div>
 								<div class="swiper-container sliderAbout-js">
-									<div class="about-prev">
-										<svg class="icon icon-chevron-left-sl ">
-											<use xlink:href="img/svg/sprite.svg#chevron-left-sl"></use>
-										</svg>
-									</div>
 									<div class="swiper-wrapper">
 										<div class="swiper-slide"><a class="sAboutInside__aboutSlide" href="img/@2x/about-2-1.jpg" data-fancybox="about">
 											<picture>
@@ -183,11 +187,11 @@
 											</picture></a>
 										</div>
 									</div>
-									<div class="about-next">
-										<svg class="icon icon-chevron-right-sl ">
-											<use xlink:href="img/svg/sprite.svg#chevron-right-sl"></use>
-										</svg>
-									</div>
+								</div>
+								<div class="about-next">
+									<svg class="icon icon-chevron-right-sl ">
+										<use xlink:href="img/svg/sprite.svg#chevron-right-sl"></use>
+									</svg>
 								</div>
 							</div>
 						</div>
@@ -197,16 +201,18 @@
 								<source srcset="#" data-srcset="img/@2x/webp/about-bg-3.webp" type="image/webp"/><img src="#" data-src="img/@2x/about-bg-3.png" alt=""/>
 							</picture>
 							<!-- /picture-->
-							<div class="sAboutInside__title">Памятник ржавичне
+							<div class="sAboutInside__text">
+								<div class="sAboutInside__title wow animate__fadeInUp">Памятник ржавичне
+								</div>
+								<p class="wow  animate__fadeInLeft  ">Центр &laquo;Железно!&raquo;&nbsp;&mdash; это многофункциональное экспозиционно-образовательное и&nbsp;досуговое пространство. В&nbsp;оснащенных мультимедийным оборудованием залах посетители получат возможность просматривать фотослайды, видеоролики, с использованием интерактивных сервисов ознакомиться с&nbsp;процессами выплавки стали, производства проката, с историей разведки железорудных месторождений и&nbsp;создания выдающихся сооружений</p>
 							</div>
-							<p>Центр &laquo;Железно!&raquo;&nbsp;&mdash; это многофункциональное экспозиционно-образовательное и&nbsp;досуговое пространство. В&nbsp;оснащенных мультимедийным оборудованием залах посетители получат возможность просматривать фотослайды, видеоролики, с&nbsp;использованием интерактивных сервисов ознакомиться с&nbsp;процессами выплавки стали, производства проката, с&nbsp;историей разведки железорудных месторождений и&nbsp;создания выдающихся сооружений</p>
-							<div class="sAboutInside__slider">
+							<div class="sAboutInside__slider wow animate__fadeInRight">
+								<div class="about-prev">
+									<svg class="icon icon-chevron-left-sl ">
+										<use xlink:href="img/svg/sprite.svg#chevron-left-sl"></use>
+									</svg>
+								</div>
 								<div class="swiper-container sliderAbout-js">
-									<div class="about-prev">
-										<svg class="icon icon-chevron-left-sl ">
-											<use xlink:href="img/svg/sprite.svg#chevron-left-sl"></use>
-										</svg>
-									</div>
 									<div class="swiper-wrapper">
 										<div class="swiper-slide"><a class="sAboutInside__aboutSlide" href="img/@2x/about-3-1.jpg" data-fancybox="about">
 											<picture>
@@ -224,11 +230,11 @@
 											</picture></a>
 										</div>
 									</div>
-									<div class="about-next">
-										<svg class="icon icon-chevron-right-sl ">
-											<use xlink:href="img/svg/sprite.svg#chevron-right-sl"></use>
-										</svg>
-									</div>
+								</div>
+								<div class="about-next">
+									<svg class="icon icon-chevron-right-sl ">
+										<use xlink:href="img/svg/sprite.svg#chevron-right-sl"></use>
+									</svg>
 								</div>
 							</div>
 						</div>
@@ -238,16 +244,18 @@
 								<source srcset="#" data-srcset="img/@2x/webp/about-bg-4.webp" type="image/webp"/><img src="#" data-src="img/@2x/about-bg-4.png" alt=""/>
 							</picture>
 							<!-- /picture-->
-							<div class="sAboutInside__title">Польза
+							<div class="sAboutInside__text">
+								<div class="sAboutInside__title wow animate__fadeInUp">Польза
+								</div>
+								<p class="wow  animate__fadeInLeft  ">Центр &laquo;Железно!&raquo;&nbsp;&mdash; это многофункциональное экспозиционно-образовательное и&nbsp;досуговое пространство. В&nbsp;оснащенных мультимедийным оборудованием залах посетители получат возможность просматривать фотослайды, видеоролики, с использованием интерактивных сервисов ознакомиться с&nbsp;процессами выплавки стали, производства проката, с историей разведки железорудных месторождений и&nbsp;создания выдающихся сооружений</p>
 							</div>
-							<p>Центр &laquo;Железно!&raquo;&nbsp;&mdash; это многофункциональное экспозиционно-образовательное и&nbsp;досуговое пространство. В&nbsp;оснащенных мультимедийным оборудованием залах посетители получат возможность просматривать фотослайды, видеоролики, с&nbsp;использованием интерактивных сервисов ознакомиться с&nbsp;процессами выплавки стали, производства проката, с&nbsp;историей разведки железорудных месторождений и&nbsp;создания выдающихся сооружений</p>
-							<div class="sAboutInside__slider">
+							<div class="sAboutInside__slider wow animate__fadeInRight">
+								<div class="about-prev">
+									<svg class="icon icon-chevron-left-sl ">
+										<use xlink:href="img/svg/sprite.svg#chevron-left-sl"></use>
+									</svg>
+								</div>
 								<div class="swiper-container sliderAbout-js">
-									<div class="about-prev">
-										<svg class="icon icon-chevron-left-sl ">
-											<use xlink:href="img/svg/sprite.svg#chevron-left-sl"></use>
-										</svg>
-									</div>
 									<div class="swiper-wrapper">
 										<div class="swiper-slide"><a class="sAboutInside__aboutSlide" href="img/@2x/about-3-1.jpg" data-fancybox="about">
 											<picture>
@@ -265,11 +273,11 @@
 											</picture></a>
 										</div>
 									</div>
-									<div class="about-next">
-										<svg class="icon icon-chevron-right-sl ">
-											<use xlink:href="img/svg/sprite.svg#chevron-right-sl"></use>
-										</svg>
-									</div>
+								</div>
+								<div class="about-next">
+									<svg class="icon icon-chevron-right-sl ">
+										<use xlink:href="img/svg/sprite.svg#chevron-right-sl"></use>
+									</svg>
 								</div>
 							</div>
 						</div>
@@ -285,7 +293,7 @@
 									<div class="s-news__img-wrap"><img class="swiper-lazy res-i" src="img/@2x/about-last-1.jpg" alt=""/>
 									</div>
 									<div class="s-news__caption">
-										<div class="s-news__date">Гараж
+										<div class="s-news__name">Гараж
 										</div>
 										<div class="s-news__title">Центр «Железно!» – это многофункциональное экспозиционно-образовательное и досуговое пространство. В оснащенных мультимедийным оборудованием залах посетители получат 
 										</div>
@@ -295,7 +303,7 @@
 									<div class="s-news__img-wrap"><img class="swiper-lazy res-i" src="img/@2x/about-last-2.jpg" alt=""/>
 									</div>
 									<div class="s-news__caption">
-										<div class="s-news__date">Кино
+										<div class="s-news__name">Кино
 										</div>
 										<div class="s-news__title">Центр «Железно!» – это многофункциональное экспозиционно-образовательное и досуговое пространство. В оснащенных мультимедийным оборудованием залах посетители получат 
 										</div>
@@ -305,7 +313,7 @@
 									<div class="s-news__img-wrap"><img class="swiper-lazy res-i" src="img/@2x/about-last-3.jpg" alt=""/>
 									</div>
 									<div class="s-news__caption">
-										<div class="s-news__date">Звуки железа
+										<div class="s-news__name">Звуки железа
 										</div>
 										<div class="s-news__title">Центр «Железно!» – это многофункциональное экспозиционно-образовательное и досуговое пространство. В оснащенных мультимедийным оборудованием залах посетители получат 
 										</div>

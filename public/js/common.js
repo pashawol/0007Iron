@@ -119,7 +119,7 @@ function eventHandler() {
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/02.jpg);"></div>'); // /добавляет подложку для pixel perfect
+	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/about.jpg);"></div>'); // /добавляет подложку для pixel perfect
 	// листалка по стр
 
 	$(" .top-nav li a, .scroll-link").click(function () {
@@ -179,8 +179,8 @@ function eventHandler() {
 			}
 		},
 		navigation: {
-			nextEl: '.sliderAbout-js .about-next',
-			prevEl: '.sliderAbout-js .about-prev'
+			nextEl: '.sAboutInside__slider .about-next',
+			prevEl: '.sAboutInside__slider .about-prev'
 		}
 	}));
 	var swiper4 = new Swiper('.s-calendar__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {

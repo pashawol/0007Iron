@@ -9,7 +9,7 @@ mixin sAboutInside()
 	// start sAboutInside
 	+b.sAboutInside.section#sAboutInside&attributes(attributes)
 		.container
-			+e.links
+			+e.links( class="wow  animate__fadeInLeft  ")
 				+e.link.active(href="#") Красота
 				+e.link(href="#") Сила
 				+e.link(href="#") Ржавчина
@@ -20,16 +20,17 @@ mixin sAboutInside()
 			mixin item(bg,title)
 				+e.item&attributes(attributes)
 					+pic(`about-bg-${bg}.png`,'','lazy','')(class="picture-bg")
-					+e.title= title
-					p Центр &laquo;Железно!&raquo;&nbsp;&mdash; это многофункциональное экспозиционно-образовательное и&nbsp;досуговое пространство. В&nbsp;оснащенных мультимедийным оборудованием залах посетители получат возможность просматривать фотослайды, видеоролики, с&nbsp;использованием интерактивных сервисов ознакомиться с&nbsp;процессами выплавки стали, производства проката, с&nbsp;историей разведки железорудных месторождений и&nbsp;создания выдающихся сооружений
-					+e.slider
+					+e.text
+						+e.title( class="wow  animate__fadeInUp  ")= title
+						p( class="wow  animate__fadeInLeft  ") Центр &laquo;Железно!&raquo;&nbsp;&mdash; это многофункциональное экспозиционно-образовательное и&nbsp;досуговое пространство. В&nbsp;оснащенных мультимедийным оборудованием залах посетители получат возможность просматривать фотослайды, видеоролики, с использованием интерактивных сервисов ознакомиться с&nbsp;процессами выплавки стали, производства проката, с историей разведки железорудных месторождений и&nbsp;создания выдающихся сооружений
+					+e.slider( class="wow  animate__fadeInRight  ")
+						.about-prev
+							+icon('chevron-left-sl')
 						.swiper-container.sliderAbout-js
-							.about-prev
-								+icon('chevron-left-sl')
 							.swiper-wrapper
 								block
-							.about-next
-								+icon('chevron-right-sl')
+						.about-next
+							+icon('chevron-right-sl')
 			+item('1','Красота')
 				+aboutSlide('1-1')
 				+aboutSlide('1-2')
