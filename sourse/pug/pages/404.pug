@@ -1,0 +1,24 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/s-calendar/_s-calendar.pug 
+include ../blocks/s-news/_s-news.pug
+include ../blocks/s404/_s404.pug
+
+block variables
+	- let  mainPage= 'main-page'
+block title
+	- let  title= '404'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+top-nav()
+	+s404()
+	//- +headerBlock()
+	//- +s-calendar
+	//- +sContent
+	//- +s-news
+	+footer()
+	

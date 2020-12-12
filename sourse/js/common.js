@@ -110,7 +110,7 @@ const JSCCommon = {
 
 };
 
-function eventHandler() { 
+function eventHandler() {
 	JSCCommon.modalCall();
 
 	JSCCommon.tabscostume('tabs');
@@ -121,11 +121,11 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/about.jpg);"></div>')
+	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/05-services.jpg);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
- 
+
 
 	// листалка по стр
 	$(" .top-nav li a, .scroll-link").click(function () {
@@ -146,13 +146,13 @@ function eventHandler() {
 	}
 	const swiper1 = new Swiper('.headerBlock__slider-lg--js', {
 		// slidesPerView: 5,
-		...defaultSl, 
-		loop: true, 
-								navigation: {
-									nextEl: '.swiper-button-next',
-									prevEl: '.swiper-button-prev',
-								},
-	
+		...defaultSl,
+		loop: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+
 	});
 	const swiper2 = new Swiper('.headerBlock__slider-sm--js', {
 		// slidesPerView: 5,
@@ -165,7 +165,7 @@ function eventHandler() {
 		// touchRatio: 0.2,
 		slideToClickedSlide: true,
 		freeModeMomentum: true,
-		spaceBetween: 28, 
+		spaceBetween: 28,
 	});
 
 	const swiper44 = new Swiper('.s-news__slider--js', {
@@ -213,7 +213,7 @@ function eventHandler() {
 			prevEl: '.sAboutInside__slider .about-prev',
 		},
 	});
-	
+
 	const swiper4 = new Swiper('.s-calendar__slider--js', {
 		// slidesPerView: 5,
 		...defaultSl,
@@ -226,7 +226,7 @@ function eventHandler() {
 	});
 
 	// modal window
- 
+
 
 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 	if (isIE11) {
@@ -235,7 +235,7 @@ function eventHandler() {
 	}
 	var wow = new WOW({
 		mobile: false,
-		animateClass: 'animate__animated', 
+		animateClass: 'animate__animated',
 	});
 	wow.init();
 };
