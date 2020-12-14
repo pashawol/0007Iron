@@ -513,8 +513,8 @@ $form-label-font-style: null !default;
 $form-label-font-weight: null !default;
 $form-label-color: null !default;
 
-$input-padding-y: $input-btn-padding-y !default;
-$input-padding-x: $input-btn-padding-x !default;
+$input-padding-y: rem(15) !default;
+$input-padding-x: 0 !default;
 $input-font-family: $input-btn-font-family !default;
 $input-font-size: $input-btn-font-size !default;
 $input-font-weight: $font-weight-base !default;
@@ -537,9 +537,9 @@ $input-border-color: $gray-400 !default;
 $input-border-width: $input-btn-border-width !default;
 $input-box-shadow: $box-shadow-inset !default;
 
-$input-border-radius: $border-radius !default;
-$input-border-radius-sm: $border-radius-sm !default;
-$input-border-radius-lg: $border-radius-lg !default;
+$input-border-radius: none !default;
+$input-border-radius-sm: none !default;
+$input-border-radius-lg: none !default;
 
 $input-focus-bg: $input-bg !default;
 $input-focus-border-color: lighten($component-active-bg, 25%) !default;

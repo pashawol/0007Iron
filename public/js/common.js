@@ -119,7 +119,7 @@ function eventHandler() {
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/05-services.jpg);"></div>'); // /добавляет подложку для pixel perfect
+	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/06-single-service.jpg);"></div>'); // /добавляет подложку для pixel perfect
 	// листалка по стр
 
 	$(" .top-nav li a, .scroll-link").click(function () {
@@ -190,6 +190,17 @@ function eventHandler() {
 			type: 'bullets',
 			clickable: true
 		}
+	}));
+	var swiperSservice = new Swiper('.serv-gallery__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+		slidesPerView: 'auto',
+		watchOverflow: true,
+		//freeMode: true,
+		loop: true,
+		slideToClickedSlide: true,
+		//freeModeMomentum: true,
+		spaceBetween: 32 //centeredSlide: true,
+		//initialSlide: 3,		
+
 	})); // modal window
 
 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;

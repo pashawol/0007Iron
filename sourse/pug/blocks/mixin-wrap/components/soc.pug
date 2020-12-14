@@ -11,4 +11,20 @@ mixin soc()
 		+item('vk')
 		+item('fb')
 		+item('instagram')
+		+item('youtube')
 //- /scial buttons 
+
+//- scial buttons-2
+mixin soc2()
+	+b.soc
+		mixin item(icon, a='#')
+			+e.A.item(href= a target="_blank")
+				if block
+					block
+				else
+					+icon(icon)
+		+item('insta-circular')
+		+item('vk-circular')
+		+item('fb-circular')
+		+item('twitter-circular')
+//- scial buttons-2

@@ -172,4 +172,12 @@
 			}
 		}
 	}
+	.mb20{
+		margin-bottom: rem(20);
+	} 
+	.center {
+		@include media-breakpoint-down(lg) {
+			margin: 0 auto;
+		}
+	}
 } // end.s-news

@@ -121,7 +121,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/05-services.jpg);"></div>')
+	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/06-single-service.jpg);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -225,6 +225,19 @@ function eventHandler() {
 		},
 	});
 
+	const swiperSservice = new Swiper('.serv-gallery__slider--js', {
+		// slidesPerView: 5,
+		...defaultSl,
+		slidesPerView: 'auto',
+		watchOverflow: true,
+		//freeMode: true,
+		loop: true,
+		slideToClickedSlide: true,
+		//freeModeMomentum: true,
+		spaceBetween: 32,
+		//centeredSlide: true,
+		//initialSlide: 3,		
+	});
 	// modal window
 
 

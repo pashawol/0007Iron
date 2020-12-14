@@ -1,0 +1,100 @@
+
+	// start .sStory
+	.sStory {
+		&__wrapper {
+			max-width: rem(790);
+			p {
+				margin-bottom: rem(40);
+			}
+		}
+
+		&__date {
+			margin-bottom: rem(40);
+		}
+		
+		img {
+			max-width: 100%;
+			margin-bottom: rem(40);
+		}
+		h1 {
+			@extend .mono;
+			font-weight: 900;
+			margin-bottom: rem(40);
+			@extend .h2;
+			text-shadow: em(1) em(1) 0 #fff;
+			position: relative;
+			// z-index: 2;
+			&::before{
+				z-index: -1;
+				content: attr(title);
+				position: absolute;
+				top: rem(7);
+				left: rem(-1);
+				color: #E3E3E3;
+				text-shadow: rem(2) rem(2) 0 $primary,
+				rem(2) rem(-2) 0 $primary,
+				rem(-2) rem(2) 0 $primary,
+				rem(-2) rem(-2) 0 $primary,
+				rem(2) 0px 0 $primary,
+				0px rem(2) 0 $primary,
+				rem(-2) 0px 0 $primary,
+				0px rem(-2) 0 $primary;
+			}
+		}
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.sStory
+
+.back-link {
+	display: inline-block;
+	color: $dark;
+	padding: 0 rem(80) 0 0;
+	@include media-breakpoint-down(lg) {
+		padding: 0 0 rem(40) 0;
+	}
+	.icon {
+		fill: transparent;
+		stroke: currentColor;
+		font-size: rem(22);
+	}
+}
+
+.block-share {
+	display: flex;
+	align-items: center;
+	&__tittle {
+		font-weight: 700;
+		margin-right: rem(36);
+	}
+	
+	.soc__item {
+		color: #28237D;
+		&:hover {
+			color: $primary;
+		}
+	}
+
+}

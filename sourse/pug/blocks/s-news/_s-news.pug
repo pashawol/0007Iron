@@ -72,3 +72,35 @@ mixin s-news-about()
 					+slide('1','Гараж')
 					+slide('2','Кино')
 					+slide('3','Звуки железа')
+
+mixin s-news-07()
+	// start s-news-03
+	+b.SECTION.s-news--03.section#s-news&attributes(attributes)
+		.container 
+			.row
+					+e.H2.title.mb20 Еще новости
+					mixin slide(i)
+						+e.col.col-lg-4.mb20
+							+e.slide.center.swiper-slide( class="wow  animate__fadeInUp  ")
+								+e.item(href="#")
+									+e.DIV.img-wrap
+										img.swiper-lazy.res-i(src=`img/@2x/news-${i}.jpg`, alt="")
+									+e.DIV.caption
+										+e.DIV.date 01 ИЮНЯ 2018
+										+e.DIV.title Победители корпоративного творческого конкурса Металлоинвеста «Труд БЕЗ опасности» посетили "Железно!"
+					+slide('1')
+					+slide('2')
+					+slide('3')
+					//- +slide('1')
+					//- +slide('2')
+					//- +slide('3')
+					//- +slide('1')
+					//- +slide('2')
+					//- +slide('3')
+					//- +slide('1')
+					//- +slide('2')
+					//- +slide('3')
+
+			.text-center( class="wow  animate__fadeInUp  ")
+				a.btn-accent.mb20(href="#") Загрузить еще
+	// end s-news-03

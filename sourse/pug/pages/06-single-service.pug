@@ -4,18 +4,19 @@ extends layout/main.pug
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug 
 include ../blocks/sServices/_sServices.pug
+include ../blocks/sSingle-service/_sSingle-service.pug
 
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'Услуги'
+	- let  title= 'VR-шоу в Железно!'
 	title= title
 block pagecontent 
 	+mob-mnu()
 	+top-nav()
 	.page-head.container( class="wow  animate__fadeInUp  ")
 		h1(data-title= title)= title
-	+sServices()
+	+sSingle-service()
 	//- +headerBlock()
 	//- +s-calendar()
 	//- +sContent

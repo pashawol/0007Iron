@@ -29,12 +29,10 @@
 			<div class="menu-mobile menu-mobile--js d-lg-none">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 				</div>
-				<div class="menu-mobile__inner">
-					<div class="top-nav__user" href="/">
+				<div class="menu-mobile__inner"><a class="top-nav__user" href="/">
 						<svg class="icon icon-user ">
 							<use xlink:href="img/svg/sprite.svg#user"></use>
-						</svg>
-					</div>
+						</svg></a>
 					<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"> 
 						<li class="menu-item" itemprop="item"><a class="active" href="#" itemprop="url">Услуги</a></li>
 						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Расписание</a></li>
@@ -47,19 +45,24 @@
 				</div>
 			</div>
 			<!--  мобильное меню-->
-			<!-- start top-nav-02-->
+			<!-- start top-nav-->
 			<div class="top-nav block-with-lazy">
 				<div class="container">
 					<div class="row">
-						<div class="top-nav__col col wow animate__fadeInLeft"><a class="top-nav__logo" href="/"><img src="img/@2x/logo.png" alt=""/></a>
-						</div>
 						<div class="top-nav__col col-auto wow animate__fadeInLeft"><img src="img/@2x/logo-1.png" alt=""/>
 						</div>
 						<div class="top-nav__col col-auto wow animate__fadeInLeft"><img src="img/@2x/logo-2.png" alt=""/>
 						</div>
-						<div class="top-nav__col col-auto wow animate__fadeInLeft"><img src="img/@2x/logo-3.png" alt=""/>
+						<div class="top-nav__col col wow animate__fadeInLeft"><img src="img/@2x/logo-3.png" alt=""/>
+						</div>
+						<div class="top-nav__col col-auto d-none d-md-block wow animate__fadeInRight"><a class="top-nav__user" href="/">
+							<svg class="icon icon-user ">
+								<use xlink:href="img/svg/sprite.svg#user"></use>
+							</svg></a>
 						</div>
 						<div class="w-100"></div>
+						<div class="col-lg-auto col order-lg-0 order-last wow  animate__fadeInLeft  "><a class="top-nav__logo" href="/"><img src="img/@2x/logo.png" alt=""/></a>
+						</div>
 						<div class="col d-none d-lg-block wow  animate__fadeInLeft  ">
 							<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"> 
 								<li class="menu-item" itemprop="item"><a class="active" href="#" itemprop="url">Услуги</a></li>
@@ -70,18 +73,14 @@
 								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
 							</ul>
 						</div>
-						<div class="col-auto d-lg-none order-last wow  animate__fadeInRight  "></div>
-						<div class="top-nav__col col-auto d-none d-md-block wow animate__fadeInRight"><a class="top-nav__user" href="/">
-							<svg class="icon icon-user ">
-								<use xlink:href="img/svg/sprite.svg#user"></use>
-							</svg></a>
+						<div class="col-auto d-lg-none order-last wow  animate__fadeInRight  ">
 							<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- end top-nav-02-->
+			<!-- end top-nav-->
 			<div class="page-head container wow  animate__fadeInUp  ">
 				<h1 data-title="Услуги">Услуги</h1>
 			</div>
@@ -251,6 +250,9 @@
 								</svg></a><a class="soc__item" href="#" target="_blank">
 								<svg class="icon icon-instagram ">
 									<use xlink:href="img/svg/sprite.svg#instagram"></use>
+								</svg></a><a class="soc__item" href="#" target="_blank">
+								<svg class="icon icon-youtube ">
+									<use xlink:href="img/svg/sprite.svg#youtube"></use>
 								</svg></a>
 							</div>
 						</div>
