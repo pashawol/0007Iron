@@ -3,13 +3,12 @@
 
 
 .sServices {
-	color: $white;
-	font-size: rem(20);
-	line-height: 27px;
-	letter-spacing: normal;
-
-		
+			
 	&__item {
+		color: $white;
+		font-size: rem(20);
+		line-height: 27px;
+		letter-spacing: normal;
 		position: relative;
 		min-height: rem(356);
 		display: flex;
@@ -20,6 +19,9 @@
 		margin-left: rem(-16);
 		margin-right: rem(-25);
 		
+		@include media-breakpoint-down(lg) {
+			padding: 0 rem(26);
+		}
 		svg {
 			position: absolute;
 			left: 0;
@@ -32,10 +34,13 @@
 		}
 		&:not(last-child) {
 			margin-bottom: rem(46);
+			@include media-breakpoint-down(lg) {
+				margin-bottom: rem(35);
+			}
 		}	
 		
 		&:nth-child(even) .sServices__content {
-			order: 3;
+			order: 3;			
 		}
 
 		.shell {
@@ -48,18 +53,28 @@
 	}
 
 	&__content {
-		max-width: rem(950);		
+		max-width: rem(950);	
+		@include media-breakpoint-down(lg) {
+			order: 3;
+			padding-bottom: rem(15);
+		}
 	}	
 
 	&__tittle {
 		display: inline-block;
 		padding-top: rem(10);
 		padding-bottom: rem(30);
-			a {
-				color: $white;
-				font-size: rem(54);
-				font-weight: 900;
+		@include media-breakpoint-down(lg) {
+			padding-bottom: rem(15);
+		}		
+		a {
+			color: $white;
+			font-size: rem(54);
+			font-weight: 900;
+			@include media-breakpoint-down(sm) {
+				font-size: rem(50);
 			}
+		}
 	}	 
 
 
