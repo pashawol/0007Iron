@@ -3,8 +3,7 @@ mixin s404()
 	.container-fluid
 		+b.SECTION.s404.section.text-center#s404&attributes(attributes)
 			.s404__wrapper
-				//-h1.s404__tittle(data-title='404') 404
-				+e.IMG.image(src="../img/@2x/s404.png", alt="404")
-				p.s404__text К&nbsp;сожалению тут ничего нет. Попробуйте начать сначала.				
-				a.s404__btn.btn-accent(href="#") На&nbsp;главную
+				+pic('s404.png','','lazy','')
+			p.s404__text К&nbsp;сожалению тут ничего нет. Попробуйте начать сначала.				
+			a.s404__btn.btn-accent(href="#") На&nbsp;главную
 	// end s404
